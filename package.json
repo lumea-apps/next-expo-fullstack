@@ -1,0 +1,19 @@
+{
+  "name": "lumea-fullstack",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:mobile": "turbo run dev --filter=mobile",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "db:generate": "turbo run db:generate --filter=web",
+    "db:migrate": "turbo run db:migrate --filter=web",
+    "db:push": "turbo run db:push --filter=web"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0"
+  },
+  "packageManager": "bun@1.2.7"
+}
